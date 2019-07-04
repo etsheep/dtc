@@ -1,0 +1,28 @@
+server:
+  port: 8887
+  servlet:
+    context-path: /${spring.application.name}
+
+
+spring:
+  application:
+    name: xa
+  banner:
+    charset: utf-8
+  datasource:
+    orders:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/orders?useSSL=true
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      username: root
+      password: 123456
+      hikari:
+        maximum-pool-size: 30
+    goods:
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/goods?useSSL=true
+      driver-class-name: com.mysql.jdbc.Driver
+      type: com.zaxxer.hikari.HikariDataSource
+      username: root
+      password: 123456
+      hikari:
+        maximum-pool-size: 30

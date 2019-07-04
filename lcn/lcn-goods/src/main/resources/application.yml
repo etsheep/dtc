@@ -1,0 +1,26 @@
+server:
+  port: 8889
+  servlet:
+    context-path: /${spring.application.name}
+
+
+spring:
+  application:
+    name: lcngoods
+  banner:
+    charset: utf-8
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/goods?useSSL=true
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    username: root
+    password: 123456
+    hikari:
+      maximum-pool-size: 30
+
+
+dubbo:
+  name: ${spring.application.name}
+  port: 28889
+  register: true
+  address: zookeeper://172.20.100.208:2181?backup=172.20.100.208:2182,172.20.100.208:2183
