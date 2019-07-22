@@ -1,24 +1,27 @@
 package etsheep.test.lcn.goods.service;
 
+import com.alibaba.dubbo.config.annotation.Service;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import etsheep.test.lcn.goods.model.Goods;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  * Created by etsheep on 2019-7-3.
  */
 
+@Component("goodsService")
 @Service
-@com.alibaba.dubbo.config.annotation.Service
 public class GoodsServiceImpl implements GoodsService {
 
     @Autowired
     private JdbcTemplate goodsJdbcTemplate;
 
     @Override
+    @LcnTransaction
     @Transactional
     public void reduceStock(int goodsId, int reduceStock){
         Goods goods = goodsJdbcTemplate.queryForObject("SELECT * FROM GOODS WHERE ID = ?", new BeanPropertyRowMapper<>(Goods.class), goodsId);

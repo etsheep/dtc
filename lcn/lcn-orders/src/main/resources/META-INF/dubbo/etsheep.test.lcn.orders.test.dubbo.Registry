@@ -1,0 +1,3 @@
+etcd=etsheep.test.lcn.orders.test.dubbo.EtcdRegistry
+zookeeper=etsheep.test.lcn.orders.test.dubbo.ZookeeperRegistry
+test=etsheep.test.lcn.orders.test.dubbo.ZookeeperRegistry

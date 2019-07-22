@@ -20,6 +20,12 @@ spring:
 
 dubbo:
   name: ${spring.application.name}
-  port: 28889
+  port: 28887
   register: false
   address: zookeeper://172.20.100.208:2181?backup=172.20.100.208:2182,172.20.100.208:2183
+
+logging:
+  level:
+    com:
+      codingapi:
+        txlcn=DEBUG:

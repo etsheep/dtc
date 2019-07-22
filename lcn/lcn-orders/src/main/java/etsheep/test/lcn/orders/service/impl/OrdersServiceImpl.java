@@ -1,6 +1,7 @@
 package etsheep.test.lcn.orders.service.impl;
 
 import com.alibaba.dubbo.config.annotation.Reference;
+import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import etsheep.test.lcn.goods.service.GoodsService;
 import etsheep.test.lcn.orders.service.OrdersService;
 import etsheep.test.lcn.orders.utils.SnowFlake;
@@ -27,6 +28,7 @@ public class OrdersServiceImpl implements OrdersService {
     private static final long machineId = 3;
 
     @Override
+    @LcnTransaction
     @Transactional
     public void order(int goodsId, int stock) {
         SnowFlake snowFlake = new SnowFlake(dataCenterId, machineId);

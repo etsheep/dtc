@@ -13,5 +13,6 @@
 
     <dubbo:consumer timeout="120000" check="false"/>
 
+    <dubbo:annotation/>
 </beans>
 

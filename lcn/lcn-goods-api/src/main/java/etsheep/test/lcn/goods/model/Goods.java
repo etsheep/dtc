@@ -23,4 +23,10 @@ public class Goods implements Serializable {
     private String name;
     private BigDecimal money;
     private Integer stock;
+    private String remark;
+
+    private Integer preStock;
+
+    private String groupId;
+    private String applicationId;
 }
