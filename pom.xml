@@ -42,7 +42,7 @@
 
 
         <dtc.projectlombok.version>1.18.0</dtc.projectlombok.version>
-        <dtc.mysql.version>5.1.46</dtc.mysql.version>
+        <dtc.mysql.version>8.0.16</dtc.mysql.version>
         <dtc.txlcn-tc.version>5.0.2.RELEASE</dtc.txlcn-tc.version>
         <dtc.txlcn-txmsg-netty.version>5.0.2.RELEASE</dtc.txlcn-txmsg-netty.version>
         <dtc.curator.version>2.13.0</dtc.curator.version>
